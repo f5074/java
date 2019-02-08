@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="practice.mybatis.memberMapper">
+	<insert id="add" parameterType="practice.mybatis.MemberVo">
+		insert into members
+		values(#{id},#{pwd},#{email},#{phone}, now())
+	</insert>
+
+	<delete id="remove" parameterType="java.lang.String">
+		delete from members where
+		id=#{id}
+	</delete>
+
+	<update id="modify" parameterType="practice.mybatis.MemberVo">
+		update members set
+		pwd=#{pwd},email=#{email},phone=#{phone} where id=#{id}
+	</update>
+
+	<select id="getlist" resultType="practice.mybatis.MemberVo">
+		select * from members
+	</select>
+
+	<select id="find" parameterType="String" resultType="practice.mybatis.MemberVo">
+		select * from members where id=#{id}
+	</select>
+
+	<select id="getInfo" parameterType="String" resultType="hashmap">
+		select id, pwd, email, phone, regdate
+		from members
+		where id=#{id}
+	</select>
+</mapper>
