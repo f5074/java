@@ -8,7 +8,7 @@ import java.util.Date;
 public class DateCompare {
 	public static void main(String[] args) throws ParseException {
 		System.out.println("test");
-		v1();
+		v4();
 	}
 
 	public static void v1(){
@@ -50,5 +50,26 @@ public class DateCompare {
 		if(compare > -1){
 			System.out.println("등록");
 		}
+	}
+
+	public static void v4() throws ParseException{
+		String reqDt = "20230223";
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd");
+		String baseDt = "20230301";
+
+		Calendar cal = Calendar.getInstance();
+		cal.set(Calendar.YEAR, Integer.parseInt(baseDt.substring(0, 4)));
+		cal.set(Calendar.MONTH, Integer.parseInt(baseDt.substring(4, 6)) - 1);
+		cal.set(Calendar.DATE, Integer.parseInt(baseDt.substring(6, 8)));
+		cal.add(Calendar.DATE, -5);
+		baseDt = dateFormat.format(cal.getTime());
+
+		Date tempReqDate = new Date(dateFormat.parse(reqDt).getTime());
+		Date tempCompareDate = new Date(dateFormat.parse(baseDt).getTime());
+		int compare = tempReqDate.compareTo(tempCompareDate);
+		if(compare != 1){
+			System.out.println(compare);
+		}
+
 	}
 }
