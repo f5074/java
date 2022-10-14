@@ -13,7 +13,7 @@ public class AddButton implements ActionListener {
 	JTextField tfAge;
 	JTextField tfSex;
 
-	// »ı¼ºÀÚ¿¡°Ô table°ú ±âÅ¸ Á¤º¸¸¦ ³Ñ°ÜÁØ´Ù.
+	// ìƒì„±ìì—ê²Œ tableê³¼ ê¸°íƒ€ ì •ë³´ë¥¼ ë„˜ê²¨ì¤€ë‹¤.
 	public AddButton(JTable table, JTextField tfName, JTextField tfAge, JTextField tfSex) {
 		this.table = table;
 		this.tfName = tfName;
@@ -27,9 +27,9 @@ public class AddButton implements ActionListener {
 		str[1] = tfAge.getText();
 		str[2] = tfSex.getText();
 
-		// »ı¼ºÀÚ·ÎºÎÅÍ ¹ŞÀº table °´Ã¼ÀÇ Å¸ÀÔÀ» º¯°æÇÑ´Ù.
+		// ìƒì„±ìë¡œë¶€í„° ë°›ì€ table ê°ì²´ì˜ íƒ€ì…ì„ ë³€ê²½í•œë‹¤.
 		DefaultTableModel model = (DefaultTableModel) table.getModel();
-		// table¿¡ object¸¦ Ãß°¡ÇÑ´Ù.
+		// tableì— objectë¥¼ ì¶”ê°€í•œë‹¤.
 		model.addRow(str);
 	}
 }

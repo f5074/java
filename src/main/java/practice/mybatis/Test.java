@@ -19,26 +19,26 @@ public class Test {
 
 		try {
 			
-//            // mybatisÈ¯°æ ¼³Á¤ ÆÄÀÏÀ» ÀĞ¾î¿À±â À§ÇÑ ½ºÆ®¸² °´Ã¼
+//            // mybatisí™˜ê²½ ì„¤ì • íŒŒì¼ì„ ì½ì–´ì˜¤ê¸° ìœ„í•œ ìŠ¤íŠ¸ë¦¼ ê°ì²´
 //            InputStream is = Resources.getResourceAsStream(res);
 //
-//            //SqlSessionFactory °´Ã¼ ¾ò¾î¿À±â
+//            //SqlSessionFactory ê°ì²´ ì–»ì–´ì˜¤ê¸°
 //            SqlSessionFactory factory=new SqlSessionFactoryBuilder().build(is);
 //
-//            //sql¹®ÀåÀ» È£ÃâÇÏ´Â sqlSession°´Ã¼ ¾ò¾î¿À±â
+//            //sqlë¬¸ì¥ì„ í˜¸ì¶œí•˜ëŠ” sqlSessionê°ì²´ ì–»ì–´ì˜¤ê¸°
 //            SqlSession session = factory.openSession();
 //            MemberVo vo = new MemberVo("batis1","1111","batis@co.kr","010", null);
 //
-//            //insert("È£ÃâÇÒ sql±¸¹® id", ÆÄ¶ó¹ÌÅÍ°´Ã¼ );
-//            int n=session.insert("add", vo); //xmlÀÇ insertÅÂ±× id, ÆÄ¶ó¹ÌÅÍ
+//            //insert("í˜¸ì¶œí•  sqlêµ¬ë¬¸ id", íŒŒë¼ë¯¸í„°ê°ì²´ );
+//            int n=session.insert("add", vo); //xmlì˜ insertíƒœê·¸ id, íŒŒë¼ë¯¸í„°
 //
 //            if(n>0){
-//                //Ä¿¹ÔÇÏ±â
+//                //ì»¤ë°‹í•˜ê¸°
 //                session.commit();
-//                System.out.println("Ãß°¡ ¼º°ø");
+//                System.out.println("ì¶”ê°€ ì„±ê³µ");
 //            }else{
 //                session.rollback();
-//                System.out.println("Ãß°¡ ½ÇÆĞ");
+//                System.out.println("ì¶”ê°€ ì‹¤íŒ¨");
 //            }
 
 			
@@ -46,7 +46,7 @@ public class Test {
 //			SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(is);
 //			SqlSession session = factory.openSession();
 //            int n = session.delete("remove", "batis1");
-//            System.out.println("delete Ã³¸®°Ç¼ö:" + n);            
+//            System.out.println("delete ì²˜ë¦¬ê±´ìˆ˜:" + n);            
 //            session.commit();
 
 			
@@ -67,7 +67,7 @@ public class Test {
 //			String findId = "batis1";
 //			MemberVo vo1 = session.selectOne("find", findId);
 //			if (vo1 == null) {
-//				System.out.println("°Ë»öµÈ È¸¿øÀÌ ¾ø¾î¿ä!");
+//				System.out.println("ê²€ìƒ‰ëœ íšŒì›ì´ ì—†ì–´ìš”!");
 //			} else {
 //				System.out.println("id:" + vo1.getId());
 //				System.out.println("pwd:" + vo1.getPwd());
@@ -78,13 +78,13 @@ public class Test {
 //			}
 //
 //			HashMap<String, Object> map = session.selectOne("practice.mybatis.memberMapper.getInfo", "batis2");
-//			// key : Ä®·³¸í, value : ³»¿ë.
+//			// key : ì¹¼ëŸ¼ëª…, value : ë‚´ìš©.
 //			String id = (String) map.get("id");
 //			String pwd = (String) map.get("pwd");
 //			String email = (String) map.get("email");
 //			String phone = (String) map.get("phone");
 //			Timestamp regdate = (Timestamp) map.get("regdate");
-//			System.out.println("[[  Á¤º¸ °Ë»ö (map »ç¿ë)  ]]");
+//			System.out.println("[[  ì •ë³´ ê²€ìƒ‰ (map ì‚¬ìš©)  ]]");
 //			System.out.println("id:" + id);
 //			System.out.println("pwd:" + pwd);
 //			System.out.println("email:" + email);

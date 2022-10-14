@@ -19,19 +19,19 @@ public class TableEx2 extends JFrame implements TableModelListener {
     //FIELDS
     private JTable table;
     private JScrollPane scrollPane;
-    private String[] columnType = { "¹øÈ£", "ÀÌ¸§", "³ªÀÌ", "¼ºº°"};
+    private String[] columnType = { "ë²ˆí˜¸", "ì´ë¦„", "ë‚˜ì´", "ì„±ë³„"};
     private Object[][] data = {
-            {"1", "±èÃ¶¼ö", "20", "³²¼º"},
-            {"2", "±è¿ÁÀÚ", "43", "¿©¼º"},
-            {"3", "ÀÌ¼ø½Å", "100", "³²¼º"},
-            {"4", "À¯°ü¼ø", "18", "¿©¼º"},
-            {"5", "ÀÌ µµ", "54", "³²¼º"}
+            {"1", "ê¹€ì² ìˆ˜", "20", "ë‚¨ì„±"},
+            {"2", "ê¹€ì˜¥ìž", "43", "ì—¬ì„±"},
+            {"3", "ì´ìˆœì‹ ", "100", "ë‚¨ì„±"},
+            {"4", "ìœ ê´€ìˆœ", "18", "ì—¬ì„±"},
+            {"5", "ì´ ë„", "54", "ë‚¨ì„±"}
     };
 
     //CONSTRUCTOR
     TableEx2()
     {
-        super("JTable Test!"); //setTitle() µµ °¡´É
+        super("JTable Test!"); //setTitle() ë„ ê°€ëŠ¥
         setSize(500, 300);
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -43,14 +43,14 @@ public class TableEx2 extends JFrame implements TableModelListener {
         table.setPreferredScrollableViewportSize(new Dimension(500, 300));
         table.setFillsViewportHeight(true);
 
-        table.getModel().addTableModelListener(this); // Å×ÀÌºí¿¡ ¼Ò¼ÓµÈ ÇÏ³ªÀÇ ¸ðµ¨ÀÌ ¼¿µéÀ» °ü¸®ÇÏ¹Ç·Î Ç×»ó getModel() À» È£ÃâÇØ¾ßÇÔ
-        table.setAutoCreateRowSorter(true); //ÀÚµ¿ Çà Á¤·Ä±â´É
+        table.getModel().addTableModelListener(this); // í…Œì´ë¸”ì— ì†Œì†ëœ í•˜ë‚˜ì˜ ëª¨ë¸ì´ ì…€ë“¤ì„ ê´€ë¦¬í•˜ë¯€ë¡œ í•­ìƒ getModel() ì„ í˜¸ì¶œí•´ì•¼í•¨
+        table.setAutoCreateRowSorter(true); //ìžë™ í–‰ ì •ë ¬ê¸°ëŠ¥
 
-        //¼ºº° ÄÃ·³¿¡ ÁöÁ¤µÈ ¼±ÅÃÁö¸¸ Ãß°¡ÇÒ ¼ö ÀÖµµ·Ï ¼³Á¤ÇÑ´Ù.
-        TableColumn genderColumn = table.getColumn("¼ºº°");
+        //ì„±ë³„ ì»¬ëŸ¼ì— ì§€ì •ëœ ì„ íƒì§€ë§Œ ì¶”ê°€í•  ìˆ˜ ìžˆë„ë¡ ì„¤ì •í•œë‹¤.
+        TableColumn genderColumn = table.getColumn("ì„±ë³„");
         JComboBox gender = new JComboBox();
-        gender.addItem("¿©¼º");
-        gender.addItem("³²¼º");
+        gender.addItem("ì—¬ì„±");
+        gender.addItem("ë‚¨ì„±");
         genderColumn.setCellEditor(new DefaultCellEditor(gender));
 
         add(scrollPane);
@@ -62,12 +62,12 @@ public class TableEx2 extends JFrame implements TableModelListener {
         int row = e.getFirstRow();
         int column = e.getColumn();
 
-        if (column == 2) { // ÄÃ·³¹øÈ£°¡ 2ÀÌ¸é "³ªÀÌ" ÄÃ·³ÀÌ´Ù. ÄÃ·³ÀÎµ¦½º´Â 0ºÎÅÍ ½ÃÀÛÇÑ´Ù.
+        if (column == 2) { // ì»¬ëŸ¼ë²ˆí˜¸ê°€ 2ì´ë©´ "ë‚˜ì´" ì»¬ëŸ¼ì´ë‹¤. ì»¬ëŸ¼ì¸ë±ìŠ¤ëŠ” 0ë¶€í„° ì‹œìž‘í•œë‹¤.
             TableModel model = (TableModel) e.getSource();
-            String colName = model.getColumnName(column); //ÇØ´ç ÀÎµ¦½ºÀÇ ÄÃ·³ÀÌ¸§À» ¹Þ¾Æ¿Â´Ù.
-            String str = (String) model.getValueAt(row, column); // data´Â object Å¸ÀÔÀÌ¹Ç·Î Çüº¯È¯ÇØ¾ß ÇÑ´Ù.
-            if (Integer.parseInt(str) > 100) { //ÀÔ·ÂÇÑ ³ªÀÌ°ªÀÌ 100ÀÌ ³ÑÀ» °æ¿ì, °æ°íÃ¢À» ¶ç¿î´Ù.
-                JOptionPane.showMessageDialog(this, "³ªÀÌ ¹üÀ§¸¦ ÃÊ°úÇÏ¿´½À´Ï´Ù. 100 ¹Ì¸¸À¸·Î ÀÔ·ÂÇØÁÖ¼¼¿ä.", "°æ°í",
+            String colName = model.getColumnName(column); //í•´ë‹¹ ì¸ë±ìŠ¤ì˜ ì»¬ëŸ¼ì´ë¦„ì„ ë°›ì•„ì˜¨ë‹¤.
+            String str = (String) model.getValueAt(row, column); // dataëŠ” object íƒ€ìž…ì´ë¯€ë¡œ í˜•ë³€í™˜í•´ì•¼ í•œë‹¤.
+            if (Integer.parseInt(str) > 100) { //ìž…ë ¥í•œ ë‚˜ì´ê°’ì´ 100ì´ ë„˜ì„ ê²½ìš°, ê²½ê³ ì°½ì„ ë„ìš´ë‹¤.
+                JOptionPane.showMessageDialog(this, "ë‚˜ì´ ë²”ìœ„ë¥¼ ì´ˆê³¼í•˜ì˜€ìŠµë‹ˆë‹¤. 100 ë¯¸ë§Œìœ¼ë¡œ ìž…ë ¥í•´ì£¼ì„¸ìš”.", "ê²½ê³ ",
                         JOptionPane.WARNING_MESSAGE);
             }
         }

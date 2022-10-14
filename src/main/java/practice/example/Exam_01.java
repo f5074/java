@@ -121,12 +121,12 @@ class Exam_01_sub extends Frame implements ActionListener {
 		}
 		result = String.valueOf(res);
 		yunres = "";
-		res = -1;// °á°ú¸¦ º»ÈÄ ´ÙÀ½¿¡ »õ·Î¿î ¼ıÀÚ¸¦ ÀÔ·ÂÇÑ´Ù¸é ±âÁ¸ÀÇ °ªÀº Áö¿öÁ®¾ß ÇÏ¹Ç·Î
+		res = -1;// ê²°ê³¼ë¥¼ ë³¸í›„ ë‹¤ìŒì— ìƒˆë¡œìš´ ìˆ«ìë¥¼ ì…ë ¥í•œë‹¤ë©´ ê¸°ì¡´ì˜ ê°’ì€ ì§€ì›Œì ¸ì•¼ í•˜ë¯€ë¡œ
 	}
 }
 
 public class Exam_01 {
 	public static void main(String[] args) {
-		Exam_01_sub ex = new Exam_01_sub("°è»ê±â¿¹Á¦");
+		Exam_01_sub ex = new Exam_01_sub("ê³„ì‚°ê¸°ì˜ˆì œ");
 	}
 }

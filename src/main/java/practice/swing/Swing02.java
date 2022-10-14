@@ -161,7 +161,7 @@ public class Swing02 {
 		public void actionPerformed(ActionEvent e) {
 			System.out.println("Insert");
 			
-			// ÅØ½ºÆ® ÀÔ·Â°ª ÀúÀå
+			// í…ìŠ¤íŠ¸ ì…ë ¥ê°’ ì €ì¥
 			String t1 = textField.getText();
 			String t2 = textField_1.getText();
 			String t3 = textField_2.getText();
@@ -171,7 +171,7 @@ public class Swing02 {
 			String t7 = textField_6.getText();
 			
 			try {
-				// DB¿¬°á
+				// DBì—°ê²°
 				Class.forName("com.mysql.cj.jdbc.Driver");
 				Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/university?characterEncoding=UTF-8&serverTimezone=UTC", "root", "1234");
 				Statement st = con.createStatement();

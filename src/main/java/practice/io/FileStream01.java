@@ -13,26 +13,26 @@ public class FileStream01 {
 
 		try {
 			
-			// ÇÁ·ÎÆÛÆ¼ °´Ã¼ »ı¼º
+			// í”„ë¡œí¼í‹° ê°ì²´ ìƒì„±
 			Properties properties = new Properties();
 			
-			// ÇÁ·ÎÁ§Æ® °æ·Î Ã£±â
+			// í”„ë¡œì íŠ¸ ê²½ë¡œ ì°¾ê¸°
 			String projectPath = System.getProperty("user.dir");
-			// ÆÄÀÏ ÀĞ±â
+			// íŒŒì¼ ì½ê¸°
 			properties.load(new FileInputStream(projectPath + "\\src\\main\\resources\\server.ini"));
 
-			// ÇÁ·ÎÆÛÆ¼ °ª ÀĞ±â
+			// í”„ë¡œí¼í‹° ê°’ ì½ê¸°
 			System.out.println(properties.getProperty("url"));
 			System.out.println(properties.getProperty("id"));
 			System.out.println(properties.getProperty("password"));
 
-			// ÇÁ·ÎÆÛÆ¼ °ª ÀúÀå
+			// í”„ë¡œí¼í‹° ê°’ ì €ì¥
 			properties.setProperty("key", "value");
 
-			// ÇÁ·ÎÆÛÆ¼ ¸®½ºÆ® Ãâ·Â
+			// í”„ë¡œí¼í‹° ë¦¬ìŠ¤íŠ¸ ì¶œë ¥
 			properties.list(System.out);
 
-			// ÆÄÀÏ ¾²±â
+			// íŒŒì¼ ì“°ê¸°
 			properties.store(new FileOutputStream(filePath + "server.ini"),null);
 			
 		} catch (Exception e) {

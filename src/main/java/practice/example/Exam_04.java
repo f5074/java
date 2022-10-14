@@ -3,13 +3,13 @@ import java.awt.*;
 import java.awt.event.*;
 
 class Exam_04_sub extends Frame implements ActionListener {
-	private Button bt1 = new Button("È®´ë");
-	private Button bt2 = new Button("Ãà¼Ò");
-	private Button bt3 = new Button("¿øº»");
-	private Button bt4 = new Button("Á¾·á");
+	private Button bt1 = new Button("í™•ëŒ€");
+	private Button bt2 = new Button("ì¶•ì†Œ");
+	private Button bt3 = new Button("ì›ë³¸");
+	private Button bt4 = new Button("ì¢…ë£Œ");
 	private int width = 100;
 
-	private Panel p = new Panel(); // ¸í·É Panel
+	private Panel p = new Panel(); // ëª…ë ¹ Panel
 
 	public void paint(Graphics g) {
 		Image img = Toolkit.getDefaultToolkit().getImage("C:\\dev\\sun.jpg");
@@ -35,7 +35,7 @@ class Exam_04_sub extends Frame implements ActionListener {
 	}
 
 	Exam_04_sub(String title) {
-		super(title); // »ı¼ºÀÚ¸¦ ÅëÇØ Å¸ÀÌÆ² »ı¼º
+		super(title); // ìƒì„±ìë¥¼ í†µí•´ íƒ€ì´í‹€ ìƒì„±
 		super.setSize(400, 300);
 		this.init();
 
@@ -72,7 +72,7 @@ class Exam_04_sub extends Frame implements ActionListener {
 public class Exam_04 {
 
 	public static void main(String[] args) {
-		Exam_04_sub ex = new Exam_04_sub("awt ½Ç½À Å¸ÀÌÆ²");
+		Exam_04_sub ex = new Exam_04_sub("awt ì‹¤ìŠµ íƒ€ì´í‹€");
 	}
 
 }

@@ -10,25 +10,25 @@ public class TableEx {
 	public static void main(String[] args) {
 		
 		Frame f = new Frame();
-		String[] columnType = { "¹øÈ£", "ÀÌ¸§", "³ªÀÌ", "¼ºº°"};
+		String[] columnType = { "ë²ˆí˜¸", "ì´ë¦„", "ë‚˜ì´", "ì„±ë³„"};
 
 		Object[][] data = {
 
-		       {"1", "±èÃ¶¼ö", "20", "³²¼º"},
+		       {"1", "ê¹€ì² ìˆ˜", "20", "ë‚¨ì„±"},
 
-		       {"2", "±è¿ÁÀÚ", "43", "¿©¼º"},
+		       {"2", "ê¹€ì˜¥ì", "43", "ì—¬ì„±"},
 
-		       {"3", "ÀÌ¼ø½Å", "100", "³²¼º"},
+		       {"3", "ì´ìˆœì‹ ", "100", "ë‚¨ì„±"},
 
-		       {"4", "À¯°ü¼ø", "18", "¿©¼º"},
+		       {"4", "ìœ ê´€ìˆœ", "18", "ì—¬ì„±"},
 
-		       {"5", "ÀÌ µµ", "54", "³²¼º"}
+		       {"5", "ì´ ë„", "54", "ë‚¨ì„±"}
 
 		};
 
 		JTable table = new JTable(data, columnType);
 		
-		// Á¾·á ÀÌº¥Æ®
+		// ì¢…ë£Œ ì´ë²¤íŠ¸
 		f.addWindowListener(new WindowAdapter(){
 			  public void windowClosing(WindowEvent we){
 			    System.exit(0);

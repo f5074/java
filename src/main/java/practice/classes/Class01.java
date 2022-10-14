@@ -3,12 +3,12 @@ package practice.classes;
 public class Class01 {
 
 	public Class01() {
-		System.out.println("1¹øÀ¸·Î Å¬·¡½º »ı¼º");
+		System.out.println("1ë²ˆìœ¼ë¡œ í´ë˜ìŠ¤ ìƒì„±");
 
 	}
 	
 	public Class01(String x) {
-		System.out.println("2¹øÀ¸·Î Å¬·¡½º »ı¼º");
+		System.out.println("2ë²ˆìœ¼ë¡œ í´ë˜ìŠ¤ ìƒì„±");
 		System.out.println(x);
 	}
 	

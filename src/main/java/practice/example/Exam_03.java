@@ -5,28 +5,28 @@ import java.awt.event.*;
 class Exam_03_sub extends Frame {
 
 	public void paint(Graphics g) {
-		// »ö±ò ±âº»»öÀº °ËÁ¤
-		g.drawLine(50, 50, 100, 100); // ±âº» ¼±
-		g.setColor(Color.BLUE); // ÀÌ ÀÌÈÄºÎÅÍ ±×¸®´Â °Í ÆÄ¶û»ö
-		g.drawRect(50, 50, 100, 100); // »ç°¢Çü ±×¸®±â
-		g.setColor(Color.RED); // ÀÌ ÀÌÈÄºÎÅÍ »ö±ò »¡°­
-		g.fillRect(200, 50, 100, 100); // ¾È¿¡ »öÃ¤¿î »ç°¢Çü
-		g.drawOval(50, 50, 100, 100); // ¿ø ±×¸®±â
+		// ìƒ‰ê¹” ê¸°ë³¸ìƒ‰ì€ ê²€ì •
+		g.drawLine(50, 50, 100, 100); // ê¸°ë³¸ ì„ 
+		g.setColor(Color.BLUE); // ì´ ì´í›„ë¶€í„° ê·¸ë¦¬ëŠ” ê²ƒ íŒŒë‘ìƒ‰
+		g.drawRect(50, 50, 100, 100); // ì‚¬ê°í˜• ê·¸ë¦¬ê¸°
+		g.setColor(Color.RED); // ì´ ì´í›„ë¶€í„° ìƒ‰ê¹” ë¹¨ê°•
+		g.fillRect(200, 50, 100, 100); // ì•ˆì— ìƒ‰ì±„ìš´ ì‚¬ê°í˜•
+		g.drawOval(50, 50, 100, 100); // ì› ê·¸ë¦¬ê¸°
 		g.setColor(Color.BLACK);
 		int x[] = new int[] { 170, 230, 140 };
 		int y[] = new int[] { 170, 210, 200 };
-		g.fillPolygon(x, y, 3); // ´Ù°¢Çü ±×¸®±â
+		g.fillPolygon(x, y, 3); // ë‹¤ê°í˜• ê·¸ë¦¬ê¸°
 		g.setColor(Color.GREEN);
 		g.setFont(new Font("", Font.BOLD, 15));
-		g.drawString("¾È³çÇÏ¼¼¿ä!", 50, 200);
+		g.drawString("ì•ˆë…•í•˜ì„¸ìš”!", 50, 200);
 
-		Image img = Toolkit.getDefaultToolkit().getImage("C:\\dev\\sun.jpg");// »ó´ë°æ·Î
-		g.drawImage(img, 230, 180, 80, 80, this); // ÇöÀçÀ§Ä¡¿¡ Ãâ·Â (this)
+		Image img = Toolkit.getDefaultToolkit().getImage("C:\\dev\\sun.jpg");// ìƒëŒ€ê²½ë¡œ
+		g.drawImage(img, 230, 180, 80, 80, this); // í˜„ì¬ìœ„ì¹˜ì— ì¶œë ¥ (this)
 	}
 
 	Exam_03_sub(String title) {
 
-		super(title); // »ı¼ºÀÚ¸¦ ÅëÇØ Å¸ÀÌÆ² »ı¼º
+		super(title); // ìƒì„±ìë¥¼ í†µí•´ íƒ€ì´í‹€ ìƒì„±
 		super.setSize(400, 300);
 
 		Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
@@ -43,7 +43,7 @@ class Exam_03_sub extends Frame {
 public class Exam_03 {
 
 	public static void main(String[] args) {
-		Exam_03_sub ex = new Exam_03_sub("awt ½Ç½À Å¸ÀÌÆ²");
+		Exam_03_sub ex = new Exam_03_sub("awt ì‹¤ìŠµ íƒ€ì´í‹€");
 	}
 
 }

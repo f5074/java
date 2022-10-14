@@ -8,7 +8,7 @@ public class DeleteButton implements ActionListener {
 
 	JTable table;
 
-	// »ı¼ºÀÚ¿¡°Ô table°ú ±âÅ¸ Á¤º¸¸¦ ³Ñ°ÜÁØ´Ù.
+	// ìƒì„±ìì—ê²Œ tableê³¼ ê¸°íƒ€ ì •ë³´ë¥¼ ë„˜ê²¨ì¤€ë‹¤.
 	public DeleteButton(JTable table) {
 		this.table = table;
 	}
@@ -16,9 +16,9 @@ public class DeleteButton implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		int row = table.getSelectedRow();
 		if (row >= 0) {
-			// »ı¼ºÀÚ·ÎºÎÅÍ ¹ŞÀº table °´Ã¼ÀÇ Å¸ÀÔÀ» º¯°æÇÑ´Ù.
+			// ìƒì„±ìë¡œë¶€í„° ë°›ì€ table ê°ì²´ì˜ íƒ€ì…ì„ ë³€ê²½í•œë‹¤.
 			DefaultTableModel model = (DefaultTableModel) table.getModel();
-			// table¿¡ object¸¦ »èÁ¦ÇÑ´Ù.
+			// tableì— objectë¥¼ ì‚­ì œí•œë‹¤.
 			model.removeRow(row);
 		}
 	}

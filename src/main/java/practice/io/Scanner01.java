@@ -10,18 +10,18 @@ public class Scanner01 {
 
 		try {
 
-			// ÇÁ·ÎÁ§Æ® ÇöÀç °æ·Î Ã£±â
+			// í”„ë¡œì íŠ¸ í˜„ì¬ ê²½ë¡œ ì°¾ê¸°
 			String projectPath = System.getProperty("user.dir");
 
-			// ÆÄÀÏ °´Ã¼ »ı¼º
+			// íŒŒì¼ ê°ì²´ ìƒì„±
 			File file = new File(projectPath + "\\src\\main\\resources\\check.txt");
 
-			// ½ºÄ³³Ê »ı¼º
+			// ìŠ¤ìºë„ˆ ìƒì„±
 			Scanner scanner = new Scanner(file);
 
-			// ½ºÄ³³ÊÀÇ ´ÙÀ½ ÁÙÀÌ ¾øÀ» ¶§ ±îÁö Ãâ·Â
+			// ìŠ¤ìºë„ˆì˜ ë‹¤ìŒ ì¤„ì´ ì—†ì„ ë•Œ ê¹Œì§€ ì¶œë ¥
 			while (scanner.hasNextLine()) {
-				// ½ºÄ³³Ê ÇÑÁÙ Ãâ·Â
+				// ìŠ¤ìºë„ˆ í•œì¤„ ì¶œë ¥
 				System.out.println(scanner.nextLine());
 			}
 		} catch (Exception exception) {

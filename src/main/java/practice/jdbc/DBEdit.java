@@ -25,7 +25,7 @@ public class DBEdit extends JFrame {
 		super("DBEdit");
 
 		/////////////
-		// DB¿¡ ¿¬°á
+		// DBì— ì—°ê²°
 		DBConnect connect = new DBConnect();
 		stmt = connect.getStatement();
 
@@ -35,11 +35,11 @@ public class DBEdit extends JFrame {
 
 		JPanel p3 = new JPanel();
 
-		btn[0] = new JButton("¼±ÅÃ");
-		btn[1] = new JButton("Ãâ·Â");
-		btn[2] = new JButton("ÀÔ·Â");
-		btn[3] = new JButton("¼öÁ¤");
-		btn[4] = new JButton("»èÁ¦");
+		btn[0] = new JButton("ì„ íƒ");
+		btn[1] = new JButton("ì¶œë ¥");
+		btn[2] = new JButton("ì…ë ¥");
+		btn[3] = new JButton("ìˆ˜ì •");
+		btn[4] = new JButton("ì‚­ì œ");
 
 		for (int i = 0; i < 5; i++) {
 			btn[i].addActionListener(action);
@@ -111,7 +111,7 @@ public class DBEdit extends JFrame {
 			}
 			table.repaint();
 		} catch (Exception e) {
-			System.err.println("º¸¿© ÁÖ±â ¿¡·¯");
+			System.err.println("ë³´ì—¬ ì£¼ê¸° ì—ëŸ¬");
 		}
 	}
 
@@ -119,16 +119,16 @@ public class DBEdit extends JFrame {
 
 	class ActionBtn extends Exception implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			if (e.getActionCommand().equals("Ãâ·Â")) {
+			if (e.getActionCommand().equals("ì¶œë ¥")) {
 				showTable();
-			} else if (e.getActionCommand().equals("¼±ÅÃ")) {
+			} else if (e.getActionCommand().equals("ì„ íƒ")) {
 				int row = table.getSelectedRow();
 				/////////////////////
-				// ÅØ½ºÆ® ÇÊµå¿¡ ¹Ş¾Æ¿Â µ¥ÀÌÅÍ º¸¿©ÁÖ±â
+				// í…ìŠ¤íŠ¸ í•„ë“œì— ë°›ì•„ì˜¨ ë°ì´í„° ë³´ì—¬ì£¼ê¸°
 				for (int i = 0; i < 8; i++) {
 					text[i].setText(data[row][i]);
 				}
-			} else if (e.getActionCommand().equals("ÀÔ·Â")) {
+			} else if (e.getActionCommand().equals("ì…ë ¥")) {
 				try {
 					for (int i = 0; i < 8; i++) {
 						if (text[i].getText().equals("")) {
@@ -146,12 +146,12 @@ public class DBEdit extends JFrame {
 					System.err.println(exception.getMessage());
 				}
 				////////////////////
-				// È­¸é¿¡ Ãâ·ÂÇÏ±â
+				// í™”ë©´ì— ì¶œë ¥í•˜ê¸°
 				showTable();
 				for (int i = 0; i < 8; i++) {
 					text[i].setText("");
 				}
-			} else if (e.getActionCommand().equals("¼öÁ¤")) {
+			} else if (e.getActionCommand().equals("ìˆ˜ì •")) {
 				try {
 					stmt.executeQuery(
 							"update emp set" + " empno = " + text[0].getText() + " ,ename='" + text[1].getText()
@@ -160,24 +160,24 @@ public class DBEdit extends JFrame {
 									+ ",deptno =" + text[7].getText() + "where empno = " + text[0].getText());
 					stmt.executeQuery("commit");
 				} catch (Exception ex) {
-					System.err.println("¼öÁ¤ ¿¡·¯");
+					System.err.println("ìˆ˜ì • ì—ëŸ¬");
 				}
 				////////////////////
-				// È­¸é¿¡ Ãâ·ÂÇÏ±â
+				// í™”ë©´ì— ì¶œë ¥í•˜ê¸°
 				showTable();
 				for (int i = 0; i < 8; i++) {
 					text[i].setText("");
 				}
-			} else if (e.getActionCommand().equals("»èÁ¦")) {
+			} else if (e.getActionCommand().equals("ì‚­ì œ")) {
 				try {
 					System.out.println(text[0].getText());
 					stmt.executeQuery("delete from emp where" + " empno = " + text[0].getText());
 					stmt.executeQuery("commit");
 				} catch (Exception ex) {
-					System.err.println("»èÁ¦ ¿¡·¯");
+					System.err.println("ì‚­ì œ ì—ëŸ¬");
 				}
 				////////////////////
-				// È­¸é¿¡ Ãâ·ÂÇÏ±â
+				// í™”ë©´ì— ì¶œë ¥í•˜ê¸°
 				showTable();
 				for (int i = 0; i < 8; i++) {
 					text[i].setText("");

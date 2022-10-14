@@ -11,10 +11,10 @@ public class Class01Test {
 		new Class01().print();
 		
 		
-		Class01 c2 = new Class01("2¹ø¿¡ ³Ñ±â´Â °ª");
+		Class01 c2 = new Class01("2ë²ˆì— ë„˜ê¸°ëŠ” ê°’");
 		c2.print();
 				
-		new Class01("2¹ø¿¡ ³Ñ±â´Â °ª").print();
+		new Class01("2ë²ˆì— ë„˜ê¸°ëŠ” ê°’").print();
 		
 		
 

@@ -19,10 +19,10 @@ public class ExTest02 {
 	
 	public ExTest02() {
 
-		btn[0] = new Button("Á¶È¸");
-		btn[1] = new Button("Ãß°¡");
-		btn[2] = new Button("¼öÁ¤");
-		btn[3] = new Button("»èÁ¦");
+		btn[0] = new Button("ì¡°íšŒ");
+		btn[1] = new Button("ì¶”ê°€");
+		btn[2] = new Button("ìˆ˜ì •");
+		btn[3] = new Button("ì‚­ì œ");
 		
 		for (int i = 0; i < 4; i++) {
 			btn[i].addActionListener(action);
@@ -43,25 +43,23 @@ public class ExTest02 {
 	
 	class ActionBtn extends Exception implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			if (e.getActionCommand().equals("Á¶È¸")) {
+			if (e.getActionCommand().equals("ì¡°íšŒ")) {
 				try {
-					System.out.println("Á¶È¸");
+					System.out.println("ì¡°íšŒ");
 					System.out.println(text1.getText());
-					JOptionPane.showMessageDialog(null, "Á¶È¸");
+					JOptionPane.showMessageDialog(null, "ì¡°íšŒ");
 					
 				} catch (Exception exception) {
 					System.err.println(exception.getMessage());
 					
 				}
-			}  else if (e.getActionCommand().equals("»èÁ¦")) {
+			}  else if (e.getActionCommand().equals("ì‚­ì œ")) {
 				try {
-					System.out.println("»èÁ¦");
-					JOptionPane.showMessageDialog(null, "»èÁ¦");
+					System.out.println("ì‚­ì œ");
+					JOptionPane.showMessageDialog(null, "ì‚­ì œ");
 				} catch (Exception exception) {
 					System.err.println(exception.getMessage());
 				}
-
-
 			}
 		}
 	}

@@ -48,7 +48,7 @@ public class Swing01 {
 		JButton btnNewButton = new JButton("button1");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("¹öÆ°1¹ø Å¬¸¯");
+				System.out.println("ë²„íŠ¼1ë²ˆ í´ë¦­");
 			}
 		});
 		btnNewButton.setBounds(51, 43, 97, 23);
@@ -64,14 +64,14 @@ public class Swing01 {
 		frame.getContentPane().add(btnNewButton_1);
 	}
 
-	// ½ºÀ®¹öÆ° 
+	// ìŠ¤ìœ™ë²„íŠ¼ 
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {
 			putValue(NAME, "button2");
 			putValue(SHORT_DESCRIPTION, "Some short description");
 		}
 		public void actionPerformed(ActionEvent e) {
-			System.out.println("½ºÀ®¹öÆ° Å¬¸¯");
+			System.out.println("ìŠ¤ìœ™ë²„íŠ¼ í´ë¦­");
 		}
 	}
 }

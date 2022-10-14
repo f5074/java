@@ -29,17 +29,17 @@ public class Awt02 {
 
 	public static void main(String[] args) {
 
-		// 1. Github¿¡ ¿Ã¸± °æ¿ì ÀÚ½ÅÀÇ °èÁ¤Á¤º¸°¡ ³ëÃâµÇÁö ¾Êµµ·Ï Ç×»ó ÁÖÀÇ
-		// 2. ¾ÆÀÌµğ¿Í ºñ¹Ğ¹øÈ£ ÆÄÀÏÀ» µû·Î ¸¸µé¾î¼­ °ü¸®ÇÏ±â À§ÇØ »ç¿ë
+		// 1. Githubì— ì˜¬ë¦´ ê²½ìš° ìì‹ ì˜ ê³„ì •ì •ë³´ê°€ ë…¸ì¶œë˜ì§€ ì•Šë„ë¡ í•­ìƒ ì£¼ì˜
+		// 2. ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ íŒŒì¼ì„ ë”°ë¡œ ë§Œë“¤ì–´ì„œ ê´€ë¦¬í•˜ê¸° ìœ„í•´ ì‚¬ìš©
 		try {
 
-			// ÇÁ·ÎÆÛÆ¼ °´Ã¼ »ı¼º
+			// í”„ë¡œí¼í‹° ê°ì²´ ìƒì„±
 			Properties properties = new Properties();
 
-			// ÆÄÀÏ ÀĞ±â
+			// íŒŒì¼ ì½ê¸°
 			properties.load(new FileInputStream("C:\\DEV\\server.ini"));
 
-			// ÇÁ·ÎÆÛÆ¼ °ª ÀĞ±â
+			// í”„ë¡œí¼í‹° ê°’ ì½ê¸°
 			url = properties.getProperty("url");
 			id = properties.getProperty("id");
 			password = properties.getProperty("password");
@@ -47,7 +47,7 @@ public class Awt02 {
 		} catch (Exception exception) {
 
 			System.err.println(exception);
-			// ÆÄÀÏÀÌ ¾øÀ» °æ¿ì³ª ¿¹¿Ü ¹ß»ı ½Ã url, id, password ±âº» °ª
+			// íŒŒì¼ì´ ì—†ì„ ê²½ìš°ë‚˜ ì˜ˆì™¸ ë°œìƒ ì‹œ url, id, password ê¸°ë³¸ ê°’
 			url = "jdbc:mysql://127.0.0.1:3306/university?characterEncoding=UTF-8&serverTimezone=UTC";
 			id = "root";
 			password = "1234";
@@ -118,11 +118,11 @@ public class Awt02 {
 					int result = pstmt.executeUpdate();
 					
 					if (result != 0) {
-						System.out.println("¼º°ø");
-						JOptionPane.showMessageDialog(null, "¼º°ø");
+						System.out.println("ì„±ê³µ");
+						JOptionPane.showMessageDialog(null, "ì„±ê³µ");
 					} else {
-						System.out.println("½ÇÆĞ");
-						JOptionPane.showMessageDialog(null, "½ÇÆĞ");
+						System.out.println("ì‹¤íŒ¨");
+						JOptionPane.showMessageDialog(null, "ì‹¤íŒ¨");
 					}
 
 				} catch (Exception exception) {
@@ -142,7 +142,7 @@ public class Awt02 {
 		Npanel.add(button);
 		frame.add(Npanel);
 
-		// Á¾·á ÀÌº¥Æ®
+		// ì¢…ë£Œ ì´ë²¤íŠ¸
 		frame.addWindowListener(new WindowAdapter(){
 			  public void windowClosing(WindowEvent we){
 			    System.exit(0);

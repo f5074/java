@@ -16,20 +16,20 @@ public class AwtTable {
 
 	public static void main(String[] args) {
 
-		JFrame frame = new JFrame("Âü°¡ÀÚ ¸í´Ü");
+		JFrame frame = new JFrame("ì°¸ê°€ì ëª…ë‹¨");
 		frame.setPreferredSize(new Dimension(500, 300));
 		frame.setLocation(500, 400);
 
 		Container contentPane = frame.getContentPane();
 
-		String colNames[] = { "ÀÌ¸§", "³ªÀÌ", "¼ºº°" };
-		// Data°¡ ¾ø´Â Default TableÀ» ¸¸µç´Ù. column´Â ÀÖ±â ¶§¹®¿¡ ¾Æ·¡¿Í °°ÀÌ »ı¼º.
+		String colNames[] = { "ì´ë¦„", "ë‚˜ì´", "ì„±ë³„" };
+		// Dataê°€ ì—†ëŠ” Default Tableì„ ë§Œë“ ë‹¤. columnëŠ” ìˆê¸° ë•Œë¬¸ì— ì•„ë˜ì™€ ê°™ì´ ìƒì„±.
 		DefaultTableModel model = new DefaultTableModel(colNames, 0);
-		// spring table »ı¼º
+		// spring table ìƒì„±
 		JTable table = new JTable(model);
-		// scrollpanelÀ» Ãß°¡
+		// scrollpanelì„ ì¶”ê°€
 		JScrollPane scrollpane = new JScrollPane(table);
-		// tableÀ» frame¿¡ Ãß°¡
+		// tableì„ frameì— ì¶”ê°€
 		contentPane.add(scrollpane, BorderLayout.CENTER);
 
 		JPanel panel = new JPanel();
@@ -40,10 +40,10 @@ public class AwtTable {
 		JButton btAdd = new JButton("Add");
 		JButton btDel = new JButton("Del");
 
-		// ÀÌº¥Æ®¸¦ Ã³¸®ÇÒ class °´Ã¼¸¦ »ı¼ºÇÑ´Ù.
+		// ì´ë²¤íŠ¸ë¥¼ ì²˜ë¦¬í•  class ê°ì²´ë¥¼ ìƒì„±í•œë‹¤.
 		AddButton adaction = new AddButton(table, tfName, tfAge, tfSex);
 		DeleteButton rmaction = new DeleteButton(table);
-		// ÀÌº¥Æ® Ã³¸® °´Ã¼¸¦ ¿¬°áÇÑ´Ù.
+		// ì´ë²¤íŠ¸ ì²˜ë¦¬ ê°ì²´ë¥¼ ì—°ê²°í•œë‹¤.
 		btAdd.addActionListener(adaction);
 		btDel.addActionListener(rmaction);
 
@@ -57,14 +57,14 @@ public class AwtTable {
 		panel.add(btAdd);
 		panel.add(btDel);
 
-		// tableÀ» frame¿¡ Ãß°¡
+		// tableì„ frameì— ì¶”ê°€
 		contentPane.add(panel, BorderLayout.SOUTH);
 
-		// ÇÁ·Î±×·¥ Á¾·á
+		// í”„ë¡œê·¸ë¨ ì¢…ë£Œ
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		// frameÀÌ È­¸é¿¡ µü ¸Âµµ·Ï Ã³¸®
+		// frameì´ í™”ë©´ì— ë”± ë§ë„ë¡ ì²˜ë¦¬
 		frame.pack();
-		// È­¸é¿¡ Ç¥½Ã
+		// í™”ë©´ì— í‘œì‹œ
 		frame.setVisible(true);
 	}
 
